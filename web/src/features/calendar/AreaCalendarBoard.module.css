@@ -1,0 +1,111 @@
+/* the period and the area's actions share the top row of the board */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+/* the cards of the period or area before stay until the new answer comes, dimmed so they do not pass for it;
+   the bar with the period is not dimmed: it already names the new choice */
+.body section {
+  transition: opacity var(--dur-short) var(--ease-out);
+}
+.body[data-stale] section {
+  opacity: 0.45;
+}
+/* the board while its first answer is on the way (`BoardSkeleton`): the board's own layout with pale, still pieces;
+   each part breathes with one opacity animation for all its pieces, not one per piece */
+.loading {
+  align-content: start;
+}
+.pulse {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}
+.bar {
+  display: block;
+  border-radius: var(--radius-sm);
+  background: var(--c-subtle-2);
+}
+.tab {
+  flex: none;
+  width: 4.5em;
+  min-height: 32px;
+}
+.headline {
+  width: min(18em, 70%);
+  height: calc(var(--text-title) * 1.25);
+}
+/* the height of `.btn` */
+.loading .button {
+  min-height: 40px;
+}
+.ask {
+  width: 7em;
+}
+.file {
+  width: 10em;
+}
+/* the file button is its icon on a phone or a narrow board (`AreaActions.module.css`) */
+@media (max-width: 34rem) {
+  .file {
+    width: 52px;
+  }
+}
+@container (max-width: 34rem) {
+  .file {
+    width: 52px;
+  }
+}
+/* the caption under a figure takes two lines when four tiles share a row (the width at which `ui/Tiles` does that) */
+@container (min-width: 640px) {
+  .figures small {
+    min-height: 2lh;
+  }
+}
+/* the line of a tile's figure (`ui/Tiles`: the head size at a line height of 1.15) */
+.figure {
+  width: 5ch;
+  height: calc(var(--text-head) * 1.15);
+}
+/* a line's height of the text it stands for, so the pieces sit where the words will */
+.line {
+  width: 8em;
+  height: 1lh;
+}
+.title {
+  width: 9em;
+  height: 1.25em;
+}
+.key {
+  width: 9em;
+  height: var(--space-lg);
+}
+.month,
+.year {
+  height: var(--text-xs);
+  margin-inline: auto;
+  width: 60%;
+}
+.year {
+  width: 3ch;
+}
+.total {
+  width: 3ch;
+  height: var(--text-xs);
+  margin-left: auto;
+}
+/* the cells of the grid at the size and spacing of the real ones, paler than the palest month */
+.loading .cell {
+  background: var(--c-subtle);
+  cursor: default;
+}

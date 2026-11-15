@@ -1,0 +1,44 @@
+[project]
+name = "senda-api"
+version = "0.1.0"
+description = "HTTP API for the Verner fire calendar: harmonized MODIS and VIIRS hotspot series for any area"
+requires-python = ">=3.12"
+authors = [{ name = "Goodmartian Labs" }]
+license = "AGPL-3.0-only"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "polars>=1.0",
+    "pyarrow>=17",
+    "shapely>=2.0",
+    "pyproj>=3.6",
+    "anthropic>=2.8.0",
+    "httpx>=0.27",
+    "timezonefinder>=9.2.0",
+    "sqlalchemy>=2.1.8",
+    "psycopg[binary]>=3.3.9",
+    "alembic>=1.20.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["senda_api"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]

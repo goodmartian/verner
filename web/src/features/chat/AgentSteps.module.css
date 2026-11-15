@@ -1,0 +1,176 @@
+/* The steps of the assistant. Behaviour after Kokonut UI "AI State Loading" (MIT, https://kokonutui.com/docs/ai/ai-loading):
+   a wave through the letters of the running step, a mark that eases in on each change, a rail that fills when a step is done.
+   Only transform and opacity move, 180 to 500 ms; reduced motion stands still. */
+.steps {
+  display: grid;
+  gap: var(--space-2xs);
+  font-size: var(--text-sm);
+}
+.list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 28px;
+  color: var(--c-muted-2);
+  animation: enter var(--dur-short) var(--ease-out) both;
+}
+.step[data-status='running'] {
+  color: var(--c-ink);
+}
+.step[data-status='pending'] {
+  color: var(--c-muted);
+}
+.step[data-status='error'] {
+  color: var(--c-route);
+}
+.label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* the sign of a step stands in a small round of its own: the signs make one column, the rail runs through its middle */
+.mark {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--c-subtle);
+  color: var(--c-muted-2);
+  animation: enter var(--dur-short) var(--ease-out) both;
+}
+.mark :global(.ph) {
+  font-size: 12px;
+}
+.mark i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-muted);
+}
+.mark[data-status='running'] {
+  background: transparent;
+  color: var(--c-ink);
+}
+.mark[data-status='running'] :global(.ph) {
+  font-size: 16px;
+  animation: turn 2.4s linear infinite;
+}
+.mark[data-status='error'] {
+  color: var(--c-route);
+}
+.rail {
+  position: absolute;
+  top: 26px;
+  bottom: -2px;
+  left: 9.5px;
+  width: 1px;
+  background: var(--c-border);
+  overflow: hidden;
+}
+.rail::after {
+  content: '';
+  display: block;
+  height: 100%;
+  background: var(--c-muted);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 500ms var(--ease-out);
+}
+.rail[data-filled='on']::after {
+  transform: scaleY(1);
+}
+.letter {
+  display: inline-block;
+  white-space: pre;
+  animation: wave 1.6s ease-in-out infinite both;
+}
+/* the line the steps fold to: a quiet button as tall as a step, its arrow in the column of the signs */
+.fold {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  justify-self: start;
+  min-height: 28px;
+  padding: 0 var(--space-xs) 0 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--c-muted-2);
+  font: inherit;
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out);
+}
+.caret {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  transition: transform var(--dur-short) var(--ease-out);
+}
+.caret :global(.ph) {
+  font-size: 12px;
+}
+.caret[data-open='on'] {
+  transform: rotate(90deg);
+}
+.fold:hover {
+  background: var(--c-subtle);
+  color: var(--c-ink);
+}
+.fold:active {
+  background: var(--c-subtle-2);
+}
+.fold:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.fold:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-2xs));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes wave {
+  50% {
+    opacity: 0.3;
+  }
+}
+@keyframes turn {
+  to {
+    transform: rotate(1turn);
+  }
+}
+/* the turning arc is the sign that the work goes on, not decoration: it turns under reduced motion too */
+@media (prefers-reduced-motion: reduce) {
+  .step,
+  .mark,
+  .letter {
+    animation: none;
+  }
+  .rail::after,
+  .caret {
+    transition: none;
+  }
+  /* the stylesheet's global reduced-motion rule shortens every animation with !important; the arc keeps its pace */
+  .mark[data-status='running'] :global(.ph) {
+    animation-duration: 2.4s !important;
+  }
+}

@@ -1,0 +1,29 @@
+# secrets and local settings
+.env
+.env.*
+!.env.example
+
+# data: built by the pipeline, not kept in git
+/data/
+
+# dependencies and caches
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.tsbuildinfo
+
+# build and test output
+dist/
+coverage/
+test-results/
+playwright-report/
+*.log
+*.out
+
+# editors and the system
+.DS_Store
+.idea/
+.vscode/

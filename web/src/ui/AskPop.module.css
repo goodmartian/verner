@@ -1,0 +1,55 @@
+/* «Ask AI» over a pressed figure: one line, as high as a segment; the figure itself is seen where it was pressed */
+.pill {
+  position: fixed;
+  z-index: 45;
+  display: inline-flex;
+  align-items: stretch;
+  height: 32px;
+  border-radius: var(--radius-control);
+  background: var(--c-ink);
+  color: var(--c-on-ink);
+  box-shadow: var(--shadow-float);
+  overflow: hidden;
+  animation: pop-in var(--dur-short) var(--ease-out);
+}
+.ask,
+.show {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-inline: var(--space-sm);
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.ask:hover,
+.show:hover {
+  background: var(--c-ink-hover);
+}
+.show {
+  border-inline-start: 1px solid color-mix(in oklab, var(--c-on-ink) 30%, transparent);
+}
+.pill :focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: -3px;
+}
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pill {
+    animation: none;
+  }
+}

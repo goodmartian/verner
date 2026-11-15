@@ -1,0 +1,52 @@
+.actions {
+  padding-block: 12px;
+}
+.buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.form {
+  display: grid;
+  gap: 18px;
+  padding: 20px 24px 24px;
+}
+/* the export button with the notes of its wait under it */
+.exportText {
+  display: inline;
+}
+/* on a phone the button is its icon: the name is its label and its tip */
+@media (max-width: 34rem) {
+  .exportText {
+    display: none;
+  }
+}
+/* a narrow board does the same, whatever the screen: the room goes to the name of the period beside it */
+@container (max-width: 34rem) {
+  .exportText {
+    display: none;
+  }
+}
+/* the menu of the file: each choice says what it holds, so it is two lines and a little wider than a menu of words */
+.exportButton {
+  flex: none;
+}
+:global(.menu).exportMenu {
+  width: min(288px, calc(100vw - 2 * var(--space-sm)));
+  gap: var(--space-3xs);
+}
+.exportItem {
+  align-items: flex-start;
+  padding-block: var(--space-xs);
+}
+.exportItem :global(.spin) {
+  flex: none;
+  font-size: 16px;
+}
+.exportLines {
+  display: grid;
+  gap: var(--space-3xs);
+}
+.exportError {
+  padding: 0 var(--space-sm) var(--space-xs);
+}

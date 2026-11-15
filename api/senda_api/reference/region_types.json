@@ -1,0 +1,1676 @@
+{
+ "Province": {
+  "en": {
+   "one": "Province",
+   "other": "Provinces"
+  },
+  "fr": {
+   "one": "Province",
+   "other": "Provinces"
+  },
+  "es": {
+   "one": "Provincia",
+   "other": "Provincias"
+  },
+  "ru": {
+   "one": "Провинция",
+   "other": "Провинции"
+  }
+ },
+ "State": {
+  "en": {
+   "one": "State",
+   "other": "States"
+  },
+  "fr": {
+   "one": "État",
+   "other": "États"
+  },
+  "es": {
+   "one": "Estado",
+   "other": "Estados"
+  },
+  "ru": {
+   "one": "Штат",
+   "other": "Штаты"
+  }
+ },
+ "Territory": {
+  "en": {
+   "one": "Territory",
+   "other": "Territories"
+  },
+  "fr": {
+   "one": "Territoire",
+   "other": "Territoires"
+  },
+  "es": {
+   "one": "Territorio",
+   "other": "Territorios"
+  },
+  "ru": {
+   "one": "Территория",
+   "other": "Территории"
+  }
+ },
+ "National Territory": {
+  "en": {
+   "one": "National territory",
+   "other": "National territories"
+  },
+  "fr": {
+   "one": "Territoire national",
+   "other": "Territoires nationaux"
+  },
+  "es": {
+   "one": "Territorio nacional",
+   "other": "Territorios nacionales"
+  },
+  "ru": {
+   "one": "Национальная территория",
+   "other": "Национальные территории"
+  }
+ },
+ "Federal District": {
+  "en": {
+   "one": "Federal district",
+   "other": "Federal districts"
+  },
+  "fr": {
+   "one": "District fédéral",
+   "other": "Districts fédéraux"
+  },
+  "es": {
+   "one": "Distrito federal",
+   "other": "Distritos federales"
+  },
+  "ru": {
+   "one": "Федеральный округ",
+   "other": "Федеральные округа"
+  }
+ },
+ "Administrative County": {
+  "en": {
+   "one": "Administrative county",
+   "other": "Administrative counties"
+  },
+  "fr": {
+   "one": "Comté administratif",
+   "other": "Comtés administratifs"
+  },
+  "es": {
+   "one": "Condado administrativo",
+   "other": "Condados administrativos"
+  },
+  "ru": {
+   "one": "Административное графство",
+   "other": "Административные графства"
+  }
+ },
+ "Administrative State": {
+  "en": {
+   "one": "Administrative state",
+   "other": "Administrative states"
+  },
+  "fr": {
+   "one": "État administratif",
+   "other": "États administratifs"
+  },
+  "es": {
+   "one": "Estado administrativo",
+   "other": "Estados administrativos"
+  },
+  "ru": {
+   "one": "Административный штат",
+   "other": "Административные штаты"
+  }
+ },
+ "Administrative Zone": {
+  "en": {
+   "one": "Administrative zone",
+   "other": "Administrative zones"
+  },
+  "fr": {
+   "one": "Zone administrative",
+   "other": "Zones administratives"
+  },
+  "es": {
+   "one": "Zona administrativa",
+   "other": "Zonas administrativas"
+  },
+  "ru": {
+   "one": "Административная зона",
+   "other": "Административные зоны"
+  }
+ },
+ "Atoll": {
+  "en": {
+   "one": "Atoll",
+   "other": "Atolls"
+  },
+  "fr": {
+   "one": "Atoll",
+   "other": "Atolls"
+  },
+  "es": {
+   "one": "Atolón",
+   "other": "Atolones"
+  },
+  "ru": {
+   "one": "Атолл",
+   "other": "Атоллы"
+  }
+ },
+ "Autonomous City": {
+  "en": {
+   "one": "Autonomous city",
+   "other": "Autonomous cities"
+  },
+  "fr": {
+   "one": "Ville autonome",
+   "other": "Villes autonomes"
+  },
+  "es": {
+   "one": "Ciudad autónoma",
+   "other": "Ciudades autónomas"
+  },
+  "ru": {
+   "one": "Автономный город",
+   "other": "Автономные города"
+  }
+ },
+ "Autonomous Commune": {
+  "en": {
+   "one": "Autonomous commune",
+   "other": "Autonomous communes"
+  },
+  "fr": {
+   "one": "Commune autonome",
+   "other": "Communes autonomes"
+  },
+  "es": {
+   "one": "Comuna autónoma",
+   "other": "Comunas autónomas"
+  },
+  "ru": {
+   "one": "Автономная коммуна",
+   "other": "Автономные коммуны"
+  }
+ },
+ "Autonomous Community": {
+  "en": {
+   "one": "Autonomous community",
+   "other": "Autonomous communities"
+  },
+  "fr": {
+   "one": "Communauté autonome",
+   "other": "Communautés autonomes"
+  },
+  "es": {
+   "one": "Comunidad autónoma",
+   "other": "Comunidades autónomas"
+  },
+  "ru": {
+   "one": "Автономное сообщество",
+   "other": "Автономные сообщества"
+  }
+ },
+ "Autonomous Monastic State": {
+  "en": {
+   "one": "Autonomous monastic state",
+   "other": "Autonomous monastic states"
+  },
+  "fr": {
+   "one": "État monastique autonome",
+   "other": "États monastiques autonomes"
+  },
+  "es": {
+   "one": "Estado monástico autónomo",
+   "other": "Estados monásticos autónomos"
+  },
+  "ru": {
+   "one": "Автономное монашеское государство",
+   "other": "Автономные монашеские государства"
+  }
+ },
+ "Autonomous Province": {
+  "en": {
+   "one": "Autonomous province",
+   "other": "Autonomous provinces"
+  },
+  "fr": {
+   "one": "Province autonome",
+   "other": "Provinces autonomes"
+  },
+  "es": {
+   "one": "Provincia autónoma",
+   "other": "Provincias autónomas"
+  },
+  "ru": {
+   "one": "Автономная провинция",
+   "other": "Автономные провинции"
+  }
+ },
+ "Autonomous Region": {
+  "en": {
+   "one": "Autonomous region",
+   "other": "Autonomous regions"
+  },
+  "fr": {
+   "one": "Région autonome",
+   "other": "Régions autonomes"
+  },
+  "es": {
+   "one": "Región autónoma",
+   "other": "Regiones autónomas"
+  },
+  "ru": {
+   "one": "Автономный регион",
+   "other": "Автономные регионы"
+  }
+ },
+ "Autonomous Republic": {
+  "en": {
+   "one": "Autonomous republic",
+   "other": "Autonomous republics"
+  },
+  "fr": {
+   "one": "République autonome",
+   "other": "Républiques autonomes"
+  },
+  "es": {
+   "one": "República autónoma",
+   "other": "Repúblicas autónomas"
+  },
+  "ru": {
+   "one": "Автономная республика",
+   "other": "Автономные республики"
+  }
+ },
+ "Autonomous Sector": {
+  "en": {
+   "one": "Autonomous sector",
+   "other": "Autonomous sectors"
+  },
+  "fr": {
+   "one": "Secteur autonome",
+   "other": "Secteurs autonomes"
+  },
+  "es": {
+   "one": "Sector autónomo",
+   "other": "Sectores autónomos"
+  },
+  "ru": {
+   "one": "Автономный сектор",
+   "other": "Автономные секторы"
+  }
+ },
+ "Autonomous Territory": {
+  "en": {
+   "one": "Autonomous territory",
+   "other": "Autonomous territories"
+  },
+  "fr": {
+   "one": "Territoire autonome",
+   "other": "Territoires autonomes"
+  },
+  "es": {
+   "one": "Territorio autónomo",
+   "other": "Territorios autónomos"
+  },
+  "ru": {
+   "one": "Автономная территория",
+   "other": "Автономные территории"
+  }
+ },
+ "Canton": {
+  "en": {
+   "one": "Canton",
+   "other": "Cantons"
+  },
+  "fr": {
+   "one": "Canton",
+   "other": "Cantons"
+  },
+  "es": {
+   "one": "Cantón",
+   "other": "Cantones"
+  },
+  "ru": {
+   "one": "Кантон",
+   "other": "Кантоны"
+  }
+ },
+ "Capital": {
+  "en": {
+   "one": "Capital",
+   "other": "Capitals"
+  },
+  "fr": {
+   "one": "Capitale",
+   "other": "Capitales"
+  },
+  "es": {
+   "one": "Capital",
+   "other": "Capitales"
+  },
+  "ru": {
+   "one": "Столица",
+   "other": "Столицы"
+  }
+ },
+ "Capital City": {
+  "en": {
+   "one": "Capital city",
+   "other": "Capital cities"
+  },
+  "fr": {
+   "one": "Ville capitale",
+   "other": "Villes capitales"
+  },
+  "es": {
+   "one": "Ciudad capital",
+   "other": "Ciudades capitales"
+  },
+  "ru": {
+   "one": "Столичный город",
+   "other": "Столичные города"
+  }
+ },
+ "Capital District": {
+  "en": {
+   "one": "Capital district",
+   "other": "Capital districts"
+  },
+  "fr": {
+   "one": "District de la capitale",
+   "other": "Districts de la capitale"
+  },
+  "es": {
+   "one": "Distrito capital",
+   "other": "Distritos capitales"
+  },
+  "ru": {
+   "one": "Столичный округ",
+   "other": "Столичные округа"
+  }
+ },
+ "Capital Metropolitan City": {
+  "en": {
+   "one": "Capital metropolitan city",
+   "other": "Capital metropolitan cities"
+  },
+  "fr": {
+   "one": "Ville métropolitaine de la capitale",
+   "other": "Villes métropolitaines de la capitale"
+  },
+  "es": {
+   "one": "Ciudad metropolitana capital",
+   "other": "Ciudades metropolitanas capitales"
+  },
+  "ru": {
+   "one": "Столичный метрополитенский город",
+   "other": "Столичные метрополитенские города"
+  }
+ },
+ "Capital Region": {
+  "en": {
+   "one": "Capital region",
+   "other": "Capital regions"
+  },
+  "fr": {
+   "one": "Région de la capitale",
+   "other": "Régions de la capitale"
+  },
+  "es": {
+   "one": "Región capital",
+   "other": "Regiones capitales"
+  },
+  "ru": {
+   "one": "Столичный регион",
+   "other": "Столичные регионы"
+  }
+ },
+ "Capital Territory": {
+  "en": {
+   "one": "Capital territory",
+   "other": "Capital territories"
+  },
+  "fr": {
+   "one": "Territoire de la capitale",
+   "other": "Territoires de la capitale"
+  },
+  "es": {
+   "one": "Territorio de la capital",
+   "other": "Territorios de la capital"
+  },
+  "ru": {
+   "one": "Столичная территория",
+   "other": "Столичные территории"
+  }
+ },
+ "Centrally Administered Area": {
+  "en": {
+   "one": "Centrally administered area",
+   "other": "Centrally administered areas"
+  },
+  "fr": {
+   "one": "Zone administrée au niveau central",
+   "other": "Zones administrées au niveau central"
+  },
+  "es": {
+   "one": "Área administrada centralmente",
+   "other": "Áreas administradas centralmente"
+  },
+  "ru": {
+   "one": "Территория центрального управления",
+   "other": "Территории центрального управления"
+  }
+ },
+ "Circuit": {
+  "en": {
+   "one": "Circuit",
+   "other": "Circuits"
+  },
+  "fr": {
+   "one": "Circuit",
+   "other": "Circuits"
+  },
+  "es": {
+   "one": "Circuito",
+   "other": "Circuitos"
+  },
+  "ru": {
+   "one": "Округ",
+   "other": "Округа"
+  }
+ },
+ "City": {
+  "en": {
+   "one": "City",
+   "other": "Cities"
+  },
+  "fr": {
+   "one": "Ville",
+   "other": "Villes"
+  },
+  "es": {
+   "one": "Ciudad",
+   "other": "Ciudades"
+  },
+  "ru": {
+   "one": "Город",
+   "other": "Города"
+  }
+ },
+ "City Corporation": {
+  "en": {
+   "one": "City corporation",
+   "other": "City corporations"
+  },
+  "fr": {
+   "one": "Corporation municipale",
+   "other": "Corporations municipales"
+  },
+  "es": {
+   "one": "Corporación municipal",
+   "other": "Corporaciones municipales"
+  },
+  "ru": {
+   "one": "Городская корпорация",
+   "other": "Городские корпорации"
+  }
+ },
+ "Commissiary": {
+  "en": {
+   "one": "Commissariat",
+   "other": "Commissariats"
+  },
+  "fr": {
+   "one": "Commissariat",
+   "other": "Commissariats"
+  },
+  "es": {
+   "one": "Comisariato",
+   "other": "Comisariatos"
+  },
+  "ru": {
+   "one": "Комиссариат",
+   "other": "Комиссариаты"
+  }
+ },
+ "Commune": {
+  "en": {
+   "one": "Commune",
+   "other": "Communes"
+  },
+  "fr": {
+   "one": "Commune",
+   "other": "Communes"
+  },
+  "es": {
+   "one": "Comuna",
+   "other": "Comunas"
+  },
+  "ru": {
+   "one": "Коммуна",
+   "other": "Коммуны"
+  }
+ },
+ "County": {
+  "en": {
+   "one": "County",
+   "other": "Counties"
+  },
+  "fr": {
+   "one": "Comté",
+   "other": "Comtés"
+  },
+  "es": {
+   "one": "Condado",
+   "other": "Condados"
+  },
+  "ru": {
+   "one": "Округ",
+   "other": "Округа"
+  }
+ },
+ "Department": {
+  "en": {
+   "one": "Department",
+   "other": "Departments"
+  },
+  "fr": {
+   "one": "Département",
+   "other": "Départements"
+  },
+  "es": {
+   "one": "Departamento",
+   "other": "Departamentos"
+  },
+  "ru": {
+   "one": "Департамент",
+   "other": "Департаменты"
+  }
+ },
+ "Dependency": {
+  "en": {
+   "one": "Dependency",
+   "other": "Dependencies"
+  },
+  "fr": {
+   "one": "Dépendance",
+   "other": "Dépendances"
+  },
+  "es": {
+   "one": "Dependencia",
+   "other": "Dependencias"
+  },
+  "ru": {
+   "one": "Зависимая территория",
+   "other": "Зависимые территории"
+  }
+ },
+ "District": {
+  "en": {
+   "one": "District",
+   "other": "Districts"
+  },
+  "fr": {
+   "one": "District",
+   "other": "Districts"
+  },
+  "es": {
+   "one": "Distrito",
+   "other": "Distritos"
+  },
+  "ru": {
+   "one": "Район",
+   "other": "Районы"
+  }
+ },
+ "Division": {
+  "en": {
+   "one": "Division",
+   "other": "Divisions"
+  },
+  "fr": {
+   "one": "Division",
+   "other": "Divisions"
+  },
+  "es": {
+   "one": "División",
+   "other": "Divisiones"
+  },
+  "ru": {
+   "one": "Дивизион",
+   "other": "Дивизионы"
+  }
+ },
+ "Economic Prefecture": {
+  "en": {
+   "one": "Economic prefecture",
+   "other": "Economic prefectures"
+  },
+  "fr": {
+   "one": "Préfecture économique",
+   "other": "Préfectures économiques"
+  },
+  "es": {
+   "one": "Prefectura económica",
+   "other": "Prefecturas económicas"
+  },
+  "ru": {
+   "one": "Экономическая префектура",
+   "other": "Экономические префектуры"
+  }
+ },
+ "Emirate": {
+  "en": {
+   "one": "Emirate",
+   "other": "Emirates"
+  },
+  "fr": {
+   "one": "Émirat",
+   "other": "Émirats"
+  },
+  "es": {
+   "one": "Emirato",
+   "other": "Emiratos"
+  },
+  "ru": {
+   "one": "Эмират",
+   "other": "Эмираты"
+  }
+ },
+ "Federal City": {
+  "en": {
+   "one": "Federal city",
+   "other": "Federal cities"
+  },
+  "fr": {
+   "one": "Ville fédérale",
+   "other": "Villes fédérales"
+  },
+  "es": {
+   "one": "Ciudad federal",
+   "other": "Ciudades federales"
+  },
+  "ru": {
+   "one": "Город федерального значения",
+   "other": "Города федерального значения"
+  }
+ },
+ "Federal Dependency": {
+  "en": {
+   "one": "Federal dependency",
+   "other": "Federal dependencies"
+  },
+  "fr": {
+   "one": "Dépendance fédérale",
+   "other": "Dépendances fédérales"
+  },
+  "es": {
+   "one": "Dependencia federal",
+   "other": "Dependencias federales"
+  },
+  "ru": {
+   "one": "Федеральная зависимая территория",
+   "other": "Федеральные зависимые территории"
+  }
+ },
+ "Federal Territory": {
+  "en": {
+   "one": "Federal territory",
+   "other": "Federal territories"
+  },
+  "fr": {
+   "one": "Territoire fédéral",
+   "other": "Territoires fédéraux"
+  },
+  "es": {
+   "one": "Territorio federal",
+   "other": "Territorios federales"
+  },
+  "ru": {
+   "one": "Федеральная территория",
+   "other": "Федеральные территории"
+  }
+ },
+ "Governorate": {
+  "en": {
+   "one": "Governorate",
+   "other": "Governorates"
+  },
+  "fr": {
+   "one": "Gouvernorat",
+   "other": "Gouvernorats"
+  },
+  "es": {
+   "one": "Gobernación",
+   "other": "Gobernaciones"
+  },
+  "ru": {
+   "one": "Мухафаза",
+   "other": "Мухафазы"
+  }
+ },
+ "Highly Urbanized City": {
+  "en": {
+   "one": "Highly urbanized city",
+   "other": "Highly urbanized cities"
+  },
+  "fr": {
+   "one": "Ville hautement urbanisée",
+   "other": "Villes hautement urbanisées"
+  },
+  "es": {
+   "one": "Ciudad altamente urbanizada",
+   "other": "Ciudades altamente urbanizadas"
+  },
+  "ru": {
+   "one": "Высокоурбанизированный город",
+   "other": "Высокоурбанизированные города"
+  }
+ },
+ "Independent City": {
+  "en": {
+   "one": "Independent city",
+   "other": "Independent cities"
+  },
+  "fr": {
+   "one": "Ville indépendante",
+   "other": "Villes indépendantes"
+  },
+  "es": {
+   "one": "Ciudad independiente",
+   "other": "Ciudades independientes"
+  },
+  "ru": {
+   "one": "Независимый город",
+   "other": "Независимые города"
+  }
+ },
+ "Independent Component City": {
+  "en": {
+   "one": "Independent component city",
+   "other": "Independent component cities"
+  },
+  "fr": {
+   "one": "Ville composante indépendante",
+   "other": "Villes composantes indépendantes"
+  },
+  "es": {
+   "one": "Ciudad componente independiente",
+   "other": "Ciudades componentes independientes"
+  },
+  "ru": {
+   "one": "Независимый город",
+   "other": "Независимые города"
+  }
+ },
+ "Independent Municipality": {
+  "en": {
+   "one": "Independent municipality",
+   "other": "Independent municipalities"
+  },
+  "fr": {
+   "one": "Municipalité indépendante",
+   "other": "Municipalités indépendantes"
+  },
+  "es": {
+   "one": "Municipio independiente",
+   "other": "Municipios independientes"
+  },
+  "ru": {
+   "one": "Независимый муниципалитет",
+   "other": "Независимые муниципалитеты"
+  }
+ },
+ "Independent Town": {
+  "en": {
+   "one": "Independent town",
+   "other": "Independent towns"
+  },
+  "fr": {
+   "one": "Ville indépendante",
+   "other": "Villes indépendantes"
+  },
+  "es": {
+   "one": "Localidad independiente",
+   "other": "Localidades independientes"
+  },
+  "ru": {
+   "one": "Независимый город",
+   "other": "Независимые города"
+  }
+ },
+ "Indigenous Territory": {
+  "en": {
+   "one": "Indigenous territory",
+   "other": "Indigenous territories"
+  },
+  "fr": {
+   "one": "Territoire autochtone",
+   "other": "Territoires autochtones"
+  },
+  "es": {
+   "one": "Territorio indígena",
+   "other": "Territorios indígenas"
+  },
+  "ru": {
+   "one": "Территория коренных народов",
+   "other": "Территории коренных народов"
+  }
+ },
+ "Intendancy": {
+  "en": {
+   "one": "Intendancy",
+   "other": "Intendancies"
+  },
+  "fr": {
+   "one": "Intendance",
+   "other": "Intendances"
+  },
+  "es": {
+   "one": "Intendencia",
+   "other": "Intendencias"
+  },
+  "ru": {
+   "one": "Интендантство",
+   "other": "Интендантства"
+  }
+ },
+ "Island Area": {
+  "en": {
+   "one": "Island area",
+   "other": "Island areas"
+  },
+  "fr": {
+   "one": "Zone insulaire",
+   "other": "Zones insulaires"
+  },
+  "es": {
+   "one": "Área insular",
+   "other": "Áreas insulares"
+  },
+  "ru": {
+   "one": "Островная территория",
+   "other": "Островные территории"
+  }
+ },
+ "Kingdom": {
+  "en": {
+   "one": "Kingdom",
+   "other": "Kingdoms"
+  },
+  "fr": {
+   "one": "Royaume",
+   "other": "Royaumes"
+  },
+  "es": {
+   "one": "Reino",
+   "other": "Reinos"
+  },
+  "ru": {
+   "one": "Королевство",
+   "other": "Королевства"
+  }
+ },
+ "London Borough": {
+  "en": {
+   "one": "London borough",
+   "other": "London boroughs"
+  },
+  "fr": {
+   "one": "Borough de Londres",
+   "other": "Boroughs de Londres"
+  },
+  "es": {
+   "one": "Distrito de Londres",
+   "other": "Distritos de Londres"
+  },
+  "ru": {
+   "one": "Лондонский боро",
+   "other": "Лондонские боро"
+  }
+ },
+ "London Borough (royal)": {
+  "en": {
+   "one": "Royal borough",
+   "other": "Royal boroughs"
+  },
+  "fr": {
+   "one": "Borough royal",
+   "other": "Boroughs royaux"
+  },
+  "es": {
+   "one": "Distrito real",
+   "other": "Distritos reales"
+  },
+  "ru": {
+   "one": "Королевский боро",
+   "other": "Королевские боро"
+  }
+ },
+ "Metropolis": {
+  "en": {
+   "one": "Metropolis",
+   "other": "Metropolises"
+  },
+  "fr": {
+   "one": "Métropole",
+   "other": "Métropoles"
+  },
+  "es": {
+   "one": "Metrópolis",
+   "other": "Metrópolis"
+  },
+  "ru": {
+   "one": "Метрополия",
+   "other": "Метрополии"
+  }
+ },
+ "Metropolitan Borough": {
+  "en": {
+   "one": "Metropolitan borough",
+   "other": "Metropolitan boroughs"
+  },
+  "fr": {
+   "one": "Borough métropolitain",
+   "other": "Boroughs métropolitains"
+  },
+  "es": {
+   "one": "Distrito metropolitano",
+   "other": "Distritos metropolitanos"
+  },
+  "ru": {
+   "one": "Метрополитенский боро",
+   "other": "Метрополитенские боро"
+  }
+ },
+ "Metropolitan City": {
+  "en": {
+   "one": "Metropolitan city",
+   "other": "Metropolitan cities"
+  },
+  "fr": {
+   "one": "Ville métropolitaine",
+   "other": "Villes métropolitaines"
+  },
+  "es": {
+   "one": "Ciudad metropolitana",
+   "other": "Ciudades metropolitanas"
+  },
+  "ru": {
+   "one": "Метрополитенский город",
+   "other": "Метрополитенские города"
+  }
+ },
+ "Metropolitan department": {
+  "en": {
+   "one": "Metropolitan department",
+   "other": "Metropolitan departments"
+  },
+  "fr": {
+   "one": "Département métropolitain",
+   "other": "Départements métropolitains"
+  },
+  "es": {
+   "one": "Departamento metropolitano",
+   "other": "Departamentos metropolitanos"
+  },
+  "ru": {
+   "one": "Метрополитенский департамент",
+   "other": "Метрополитенские департаменты"
+  }
+ },
+ "Municipality": {
+  "en": {
+   "one": "Municipality",
+   "other": "Municipalities"
+  },
+  "fr": {
+   "one": "Municipalité",
+   "other": "Municipalités"
+  },
+  "es": {
+   "one": "Municipio",
+   "other": "Municipios"
+  },
+  "ru": {
+   "one": "Муниципалитет",
+   "other": "Муниципалитеты"
+  }
+ },
+ "National Capital Area": {
+  "en": {
+   "one": "National capital area",
+   "other": "National capital areas"
+  },
+  "fr": {
+   "one": "Zone de la capitale nationale",
+   "other": "Zones de la capitale nationale"
+  },
+  "es": {
+   "one": "Área de la capital nacional",
+   "other": "Áreas de la capital nacional"
+  },
+  "ru": {
+   "one": "Территория национальной столицы",
+   "other": "Территории национальной столицы"
+  }
+ },
+ "National District": {
+  "en": {
+   "one": "National district",
+   "other": "National districts"
+  },
+  "fr": {
+   "one": "District national",
+   "other": "Districts nationaux"
+  },
+  "es": {
+   "one": "Distrito nacional",
+   "other": "Distritos nacionales"
+  },
+  "ru": {
+   "one": "Национальный округ",
+   "other": "Национальные округа"
+  }
+ },
+ "Neutral City": {
+  "en": {
+   "one": "Neutral city",
+   "other": "Neutral cities"
+  },
+  "fr": {
+   "one": "Ville neutre",
+   "other": "Villes neutres"
+  },
+  "es": {
+   "one": "Ciudad neutral",
+   "other": "Ciudades neutrales"
+  },
+  "ru": {
+   "one": "Нейтральный город",
+   "other": "Нейтральные города"
+  }
+ },
+ "Overseas department": {
+  "en": {
+   "one": "Overseas department",
+   "other": "Overseas departments"
+  },
+  "fr": {
+   "one": "Département d'outre-mer",
+   "other": "Départements d'outre-mer"
+  },
+  "es": {
+   "one": "Departamento de ultramar",
+   "other": "Departamentos de ultramar"
+  },
+  "ru": {
+   "one": "Заморский департамент",
+   "other": "Заморские департаменты"
+  }
+ },
+ "Parish": {
+  "en": {
+   "one": "Parish",
+   "other": "Parishes"
+  },
+  "fr": {
+   "one": "Paroisse",
+   "other": "Paroisses"
+  },
+  "es": {
+   "one": "Parroquia",
+   "other": "Parroquias"
+  },
+  "ru": {
+   "one": "Приход",
+   "other": "Приходы"
+  }
+ },
+ "Prefecture": {
+  "en": {
+   "one": "Prefecture",
+   "other": "Prefectures"
+  },
+  "fr": {
+   "one": "Préfecture",
+   "other": "Préfectures"
+  },
+  "es": {
+   "one": "Prefectura",
+   "other": "Prefecturas"
+  },
+  "ru": {
+   "one": "Префектура",
+   "other": "Префектуры"
+  }
+ },
+ "Principality": {
+  "en": {
+   "one": "Principality",
+   "other": "Principalities"
+  },
+  "fr": {
+   "one": "Principauté",
+   "other": "Principautés"
+  },
+  "es": {
+   "one": "Principado",
+   "other": "Principados"
+  },
+  "ru": {
+   "one": "Княжество",
+   "other": "Княжества"
+  }
+ },
+ "Provincial City": {
+  "en": {
+   "one": "Provincial city",
+   "other": "Provincial cities"
+  },
+  "fr": {
+   "one": "Ville provinciale",
+   "other": "Villes provinciales"
+  },
+  "es": {
+   "one": "Ciudad provincial",
+   "other": "Ciudades provinciales"
+  },
+  "ru": {
+   "one": "Город провинциального значения",
+   "other": "Города провинциального значения"
+  }
+ },
+ "Quarter": {
+  "en": {
+   "one": "Quarter",
+   "other": "Quarters"
+  },
+  "fr": {
+   "one": "Quartier",
+   "other": "Quartiers"
+  },
+  "es": {
+   "one": "Barrio",
+   "other": "Barrios"
+  },
+  "ru": {
+   "one": "Квартал",
+   "other": "Кварталы"
+  }
+ },
+ "Regency": {
+  "en": {
+   "one": "Regency",
+   "other": "Regencies"
+  },
+  "fr": {
+   "one": "Régence",
+   "other": "Régences"
+  },
+  "es": {
+   "one": "Regencia",
+   "other": "Regencias"
+  },
+  "ru": {
+   "one": "Регентство",
+   "other": "Регентства"
+  }
+ },
+ "Region": {
+  "en": {
+   "one": "Region",
+   "other": "Regions"
+  },
+  "fr": {
+   "one": "Région",
+   "other": "Régions"
+  },
+  "es": {
+   "one": "Región",
+   "other": "Regiones"
+  },
+  "ru": {
+   "one": "Регион",
+   "other": "Регионы"
+  }
+ },
+ "Regional Council": {
+  "en": {
+   "one": "Regional council",
+   "other": "Regional councils"
+  },
+  "fr": {
+   "one": "Conseil régional",
+   "other": "Conseils régionaux"
+  },
+  "es": {
+   "one": "Consejo regional",
+   "other": "Consejos regionales"
+  },
+  "ru": {
+   "one": "Региональный совет",
+   "other": "Региональные советы"
+  }
+ },
+ "Republic": {
+  "en": {
+   "one": "Republic",
+   "other": "Republics"
+  },
+  "fr": {
+   "one": "République",
+   "other": "Républiques"
+  },
+  "es": {
+   "one": "República",
+   "other": "Repúblicas"
+  },
+  "ru": {
+   "one": "Республика",
+   "other": "Республики"
+  }
+ },
+ "Republican City": {
+  "en": {
+   "one": "Republican city",
+   "other": "Republican cities"
+  },
+  "fr": {
+   "one": "Ville républicaine",
+   "other": "Villes républicaines"
+  },
+  "es": {
+   "one": "Ciudad republicana",
+   "other": "Ciudades republicanas"
+  },
+  "ru": {
+   "one": "Город республиканского значения",
+   "other": "Города республиканского значения"
+  }
+ },
+ "Special City": {
+  "en": {
+   "one": "Special city",
+   "other": "Special cities"
+  },
+  "fr": {
+   "one": "Ville spéciale",
+   "other": "Villes spéciales"
+  },
+  "es": {
+   "one": "Ciudad especial",
+   "other": "Ciudades especiales"
+  },
+  "ru": {
+   "one": "Особый город",
+   "other": "Особые города"
+  }
+ },
+ "Special Island Authority": {
+  "en": {
+   "one": "Special island authority",
+   "other": "Special island authorities"
+  },
+  "fr": {
+   "one": "Autorité insulaire spéciale",
+   "other": "Autorités insulaires spéciales"
+  },
+  "es": {
+   "one": "Autoridad insular especial",
+   "other": "Autoridades insulares especiales"
+  },
+  "ru": {
+   "one": "Особое островное управление",
+   "other": "Особые островные управления"
+  }
+ },
+ "Special Municipality": {
+  "en": {
+   "one": "Special municipality",
+   "other": "Special municipalities"
+  },
+  "fr": {
+   "one": "Municipalité spéciale",
+   "other": "Municipalités spéciales"
+  },
+  "es": {
+   "one": "Municipio especial",
+   "other": "Municipios especiales"
+  },
+  "ru": {
+   "one": "Особый муниципалитет",
+   "other": "Особые муниципалитеты"
+  }
+ },
+ "Special district": {
+  "en": {
+   "one": "Special district",
+   "other": "Special districts"
+  },
+  "fr": {
+   "one": "District spécial",
+   "other": "Districts spéciaux"
+  },
+  "es": {
+   "one": "Distrito especial",
+   "other": "Distritos especiales"
+  },
+  "ru": {
+   "one": "Особый округ",
+   "other": "Особые округа"
+  }
+ },
+ "Special region": {
+  "en": {
+   "one": "Special region",
+   "other": "Special regions"
+  },
+  "fr": {
+   "one": "Région spéciale",
+   "other": "Régions spéciales"
+  },
+  "es": {
+   "one": "Región especial",
+   "other": "Regiones especiales"
+  },
+  "ru": {
+   "one": "Особый регион",
+   "other": "Особые регионы"
+  }
+ },
+ "Special self-governing city": {
+  "en": {
+   "one": "Special self-governing city",
+   "other": "Special self-governing cities"
+  },
+  "fr": {
+   "one": "Ville spéciale autonome",
+   "other": "Villes spéciales autonomes"
+  },
+  "es": {
+   "one": "Ciudad especial autónoma",
+   "other": "Ciudades especiales autónomas"
+  },
+  "ru": {
+   "one": "Особый самоуправляемый город",
+   "other": "Особые самоуправляемые города"
+  }
+ },
+ "Statistical Region": {
+  "en": {
+   "one": "Statistical region",
+   "other": "Statistical regions"
+  },
+  "fr": {
+   "one": "Région statistique",
+   "other": "Régions statistiques"
+  },
+  "es": {
+   "one": "Región estadística",
+   "other": "Regiones estadísticas"
+  },
+  "ru": {
+   "one": "Статистический регион",
+   "other": "Статистические регионы"
+  }
+ },
+ "Territorial Unit": {
+  "en": {
+   "one": "Territorial unit",
+   "other": "Territorial units"
+  },
+  "fr": {
+   "one": "Unité territoriale",
+   "other": "Unités territoriales"
+  },
+  "es": {
+   "one": "Unidad territorial",
+   "other": "Unidades territoriales"
+  },
+  "ru": {
+   "one": "Территориальная единица",
+   "other": "Территориальные единицы"
+  }
+ },
+ "Town": {
+  "en": {
+   "one": "Town",
+   "other": "Towns"
+  },
+  "fr": {
+   "one": "Ville",
+   "other": "Villes"
+  },
+  "es": {
+   "one": "Villa",
+   "other": "Villas"
+  },
+  "ru": {
+   "one": "Город",
+   "other": "Города"
+  }
+ },
+ "Township": {
+  "en": {
+   "one": "Township",
+   "other": "Townships"
+  },
+  "fr": {
+   "one": "Township",
+   "other": "Townships"
+  },
+  "es": {
+   "one": "Distrito",
+   "other": "Distritos"
+  },
+  "ru": {
+   "one": "Тауншип",
+   "other": "Тауншипы"
+  }
+ },
+ "Union Territory": {
+  "en": {
+   "one": "Union territory",
+   "other": "Union territories"
+  },
+  "fr": {
+   "one": "Territoire de l'Union",
+   "other": "Territoires de l'Union"
+  },
+  "es": {
+   "one": "Territorio de la Unión",
+   "other": "Territorios de la Unión"
+  },
+  "ru": {
+   "one": "Союзная территория",
+   "other": "Союзные территории"
+  }
+ },
+ "Unitary Authority": {
+  "en": {
+   "one": "Unitary authority",
+   "other": "Unitary authorities"
+  },
+  "fr": {
+   "one": "Autorité unitaire",
+   "other": "Autorités unitaires"
+  },
+  "es": {
+   "one": "Autoridad unitaria",
+   "other": "Autoridades unitarias"
+  },
+  "ru": {
+   "one": "Унитарная единица",
+   "other": "Унитарные единицы"
+  }
+ },
+ "Unitary Authority (wales)": {
+  "en": {
+   "one": "Unitary authority (Wales)",
+   "other": "Unitary authorities (Wales)"
+  },
+  "fr": {
+   "one": "Autorité unitaire (pays de Galles)",
+   "other": "Autorités unitaires (pays de Galles)"
+  },
+  "es": {
+   "one": "Autoridad unitaria (Gales)",
+   "other": "Autoridades unitarias (Gales)"
+  },
+  "ru": {
+   "one": "Унитарная единица (Уэльс)",
+   "other": "Унитарные единицы (Уэльс)"
+  }
+ },
+ "Unitary District": {
+  "en": {
+   "one": "Unitary district",
+   "other": "Unitary districts"
+  },
+  "fr": {
+   "one": "District unitaire",
+   "other": "Districts unitaires"
+  },
+  "es": {
+   "one": "Distrito unitario",
+   "other": "Distritos unitarios"
+  },
+  "ru": {
+   "one": "Унитарный район",
+   "other": "Унитарные районы"
+  }
+ },
+ "Unitary District (city)": {
+  "en": {
+   "one": "Unitary district (city)",
+   "other": "Unitary districts (city)"
+  },
+  "fr": {
+   "one": "District unitaire (ville)",
+   "other": "Districts unitaires (ville)"
+  },
+  "es": {
+   "one": "Distrito unitario (ciudad)",
+   "other": "Distritos unitarios (ciudad)"
+  },
+  "ru": {
+   "one": "Унитарный район (город)",
+   "other": "Унитарные районы (города)"
+  }
+ },
+ "Unitary Single-Tier County": {
+  "en": {
+   "one": "Unitary single-tier county",
+   "other": "Unitary single-tier counties"
+  },
+  "fr": {
+   "one": "Comté unitaire à palier unique",
+   "other": "Comtés unitaires à palier unique"
+  },
+  "es": {
+   "one": "Condado unitario de nivel único",
+   "other": "Condados unitarios de nivel único"
+  },
+  "ru": {
+   "one": "Унитарное одноуровневое графство",
+   "other": "Унитарные одноуровневые графства"
+  }
+ },
+ "Urban Prefecture": {
+  "en": {
+   "one": "Urban prefecture",
+   "other": "Urban prefectures"
+  },
+  "fr": {
+   "one": "Préfecture urbaine",
+   "other": "Préfectures urbaines"
+  },
+  "es": {
+   "one": "Prefectura urbana",
+   "other": "Prefecturas urbanas"
+  },
+  "ru": {
+   "one": "Городская префектура",
+   "other": "Городские префектуры"
+  }
+ },
+ "Urban county": {
+  "en": {
+   "one": "Urban county",
+   "other": "Urban counties"
+  },
+  "fr": {
+   "one": "Comté urbain",
+   "other": "Comtés urbains"
+  },
+  "es": {
+   "one": "Condado urbano",
+   "other": "Condados urbanos"
+  },
+  "ru": {
+   "one": "Городской комитат",
+   "other": "Городские комитаты"
+  }
+ },
+ "Voivodeship": {
+  "en": {
+   "one": "Voivodeship",
+   "other": "Voivodeships"
+  },
+  "fr": {
+   "one": "Voïvodie",
+   "other": "Voïvodies"
+  },
+  "es": {
+   "one": "Voivodato",
+   "other": "Voivodatos"
+  },
+  "ru": {
+   "one": "Воеводство",
+   "other": "Воеводства"
+  }
+ },
+ "Krai": {
+  "en": {
+   "one": "Krai",
+   "other": "Krais"
+  },
+  "fr": {
+   "one": "Kraï",
+   "other": "Kraïs"
+  },
+  "es": {
+   "one": "Krai",
+   "other": "Krais"
+  },
+  "ru": {
+   "one": "Край",
+   "other": "Края"
+  }
+ },
+ "Oblast": {
+  "en": {
+   "one": "Oblast",
+   "other": "Oblasts"
+  },
+  "fr": {
+   "one": "Oblast",
+   "other": "Oblasts"
+  },
+  "es": {
+   "one": "Óblast",
+   "other": "Óblasts"
+  },
+  "ru": {
+   "one": "Область",
+   "other": "Области"
+  }
+ }
+}

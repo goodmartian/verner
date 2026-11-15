@@ -1,0 +1,825 @@
+/* the calendar board: sections of cards on one level, the fire colour of the project as the only hue */
+.dash {
+  container-type: inline-size;
+  display: grid;
+  gap: var(--space-lg);
+  min-width: 0;
+}
+/* the bar stays at the top of the board while it scrolls: the period of the board with its file, and under them
+   the sections, the one in view lit */
+.sticky {
+  position: sticky;
+  top: calc(var(--space-2xs) * -1);
+  z-index: 6;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--space-md);
+  min-width: 0;
+  background: var(--c-bg);
+  border-bottom: 1px solid var(--c-border);
+}
+.tools {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  min-width: 0;
+  padding-top: var(--space-xs);
+}
+.nav {
+  flex: 1 1 0;
+  display: flex;
+  gap: var(--space-xs);
+  min-width: 0;
+  padding-block: var(--space-xs);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+/* a board wide enough for both keeps them on one line: the sections, then the period at the right */
+@container (min-width: 72rem) {
+  .tools {
+    order: 1;
+    flex: none;
+    padding-top: 0;
+  }
+}
+.nav button {
+  flex: none;
+  min-height: 32px;
+  padding: 0 var(--space-sm);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--c-muted-2);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out);
+}
+.nav button:hover {
+  background: var(--c-subtle);
+}
+.nav button[aria-current='true'] {
+  background: var(--c-subtle);
+  color: var(--c-ink);
+}
+.nav button:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+/* a narrow board: the names stand closer together, so all seven stay in view down to a board of 34rem */
+@container (max-width: 44rem) {
+  .nav {
+    gap: 0;
+  }
+  .nav button {
+    padding-inline: var(--space-xs);
+  }
+  /* the bar scrolls sideways: its right edge fades, and the room left after the last name lets it show whole */
+  .nav {
+    padding-right: var(--space-xl);
+    mask-image: linear-gradient(to right, #000 calc(100% - var(--space-xl)), transparent);
+  }
+}
+.block {
+  display: grid;
+  gap: var(--space-md);
+  min-width: 0;
+  /* a jump to a section stops under the bar, whose height the board measures */
+  scroll-margin-top: var(--bar, 48px);
+}
+.lead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+.leadAsk {
+  flex: none;
+  min-height: 36px;
+}
+/* a narrow board: the button goes under the headline, so the headline keeps the whole width */
+@container (max-width: 20rem) {
+  .lead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
+.lead h2 {
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-title);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.card {
+  display: grid;
+  gap: var(--space-md);
+  min-width: 0;
+  padding: var(--space-md);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-panel);
+}
+.cardHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+.cardHead h2 {
+  min-width: 0;
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+.gridBox {
+  position: relative;
+  min-width: 0;
+}
+.grid {
+  display: grid;
+  /* the first column is as wide as its longest word, whatever the language */
+  grid-template-columns: auto repeat(12, minmax(0, 1fr)) auto;
+  gap: 2px;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+}
+/* a grid too narrow for the totals: the year column is gone, the twelve months keep the room */
+.tight {
+  grid-template-columns: auto repeat(12, minmax(0, 1fr));
+}
+.row {
+  display: contents;
+}
+.head,
+.usual {
+  min-width: 0;
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+  text-align: center;
+  overflow: hidden;
+}
+.label {
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+}
+.sum {
+  min-width: 40px;
+  padding-left: var(--space-xs);
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+  text-align: right;
+}
+.cell {
+  --a: 25%;
+  position: relative;
+  height: 24px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--fire-4) var(--a), transparent);
+  color: var(--c-ink);
+  font: inherit;
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cell[data-level='0'] {
+  background: var(--c-subtle);
+  color: var(--c-muted-2);
+}
+.cell[data-level='1'] {
+  --a: 22%;
+}
+.cell[data-level='2'] {
+  --a: 45%;
+}
+.cell[data-level='3'] {
+  --a: 72%;
+}
+.cell[data-level='4'] {
+  background: var(--fire-5);
+  color: var(--c-on-ink);
+}
+.cell[data-level='none'] {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--c-border);
+  cursor: default;
+}
+.cell[data-unusual='on'] {
+  box-shadow: inset 0 0 0 1px var(--c-ink);
+}
+.cell[aria-pressed='true'] {
+  z-index: 1;
+  box-shadow:
+    0 0 0 1px var(--c-bg),
+    0 0 0 3px var(--c-ink);
+}
+.cell:hover:not(:disabled):not([aria-pressed='true']) {
+  outline: 2px solid var(--c-border-2);
+  outline-offset: 1px;
+}
+.cell:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+/* a month still being counted carries the share of it that is in */
+.cell[data-partial='on']::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: conic-gradient(var(--c-ink) var(--share), var(--c-border-2) 0);
+}
+/* a cell narrower than 28px keeps its colour and gives up its digits: the caption under the grid names the month */
+@container (max-width: 484px) {
+  .cell {
+    font-size: 0;
+  }
+}
+.expand {
+  justify-self: start;
+  min-height: 32px;
+  padding: var(--space-2xs) 0;
+  border: 0;
+  background: transparent;
+  color: var(--c-muted-2);
+  font: inherit;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.expand:hover {
+  color: var(--c-ink);
+}
+.caption {
+  min-height: 1.25em;
+  font-size: var(--text-sm);
+  color: var(--c-muted-2);
+}
+.cardHead small {
+  font-size: var(--text-sm);
+  color: var(--c-muted-2);
+}
+.bars {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 120px;
+}
+.bar {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
+  height: var(--h);
+  min-height: 2px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: color-mix(in oklab, var(--fire-4) 45%, transparent);
+}
+.bar[data-converted='on'] {
+  background: color-mix(in oklab, var(--c-muted) 60%, transparent);
+}
+.bar[data-partial='on'] {
+  background: color-mix(in oklab, var(--fire-4) 22%, transparent);
+}
+.bar[data-current='on'] {
+  background: var(--fire-4);
+}
+.bandKey {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+}
+.bandKey::before {
+  content: '';
+  width: var(--space-md);
+  height: var(--space-sm);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: color-mix(in oklab, var(--c-muted) 60%, transparent);
+}
+.axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+  color: var(--c-muted);
+}
+/* the month of the days between its two arrows */
+.axis:has(.dayNav) {
+  align-items: center;
+}
+.dayNav {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+/* the line where the satellites of the series change, across the whole width of the grid */
+.change {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: 16px;
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+}
+.change::before {
+  content: '';
+  flex: none;
+  width: var(--space-md);
+  border-top: 1px dashed var(--c-border-2);
+}
+.change::after {
+  content: '';
+  flex: 1;
+  border-top: 1px dashed var(--c-border-2);
+}
+.sentence {
+  font-size: var(--text-sm);
+  color: var(--c-ink-2);
+  line-height: 1.4;
+}
+.metrics {
+  display: grid;
+}
+.metric {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-xs) 0;
+  border-top: 1px solid var(--c-border);
+  font-size: var(--text-sm);
+}
+.metric:first-child {
+  border-top: 0;
+}
+.metric dd.warn,
+.metric dd.warn button {
+  color: var(--c-risk);
+}
+.metric dt {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--c-muted-2);
+}
+.metric dd {
+  flex: none;
+  margin-left: auto;
+  max-width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-xs);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.source {
+  display: grid;
+  gap: var(--space-2xs);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--c-border);
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+}
+.days {
+  /* the card of the day under the pointer stands in this box */
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-auto-flow: column;
+  align-items: end;
+  gap: 2px;
+  height: 96px;
+}
+.day {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.day i {
+  display: block;
+  width: 100%;
+  height: var(--h);
+  min-height: 2px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: color-mix(in oklab, var(--fire-4) 45%, transparent);
+}
+.day[aria-pressed='true'] i {
+  background: var(--fire-4);
+}
+.day:disabled {
+  cursor: default;
+}
+.day:disabled i {
+  background: var(--c-subtle-2);
+}
+.day:hover:not(:disabled) i {
+  background: color-mix(in oklab, var(--fire-4) 70%, transparent);
+}
+.day:active:not(:disabled) i {
+  background: var(--fire-4);
+}
+.day:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+.known {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.known li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.known li + li {
+  border-top: 1px solid var(--c-border);
+}
+.knownOpen {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 var(--space-md);
+  padding: var(--space-xs) 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.knownOpen:hover .knownName {
+  text-decoration: underline;
+}
+.knownOpen:active {
+  opacity: 0.7;
+}
+.knownOpen:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+.knownName {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+.knownCount {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+.knownMonth {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+}
+/* a section with nothing to show leaves no gap in the column */
+.block:empty {
+  display: none;
+}
+
+/* card head: title and gray note on the left, the figure of the picked month on the right, a fold button at the end */
+.cardTitle {
+  display: grid;
+  flex: 1;
+  gap: var(--space-3xs);
+  /* the title keeps one line: what does not fit beside it goes under it */
+  min-width: min-content;
+}
+.titleLine h2 {
+  white-space: nowrap;
+}
+.note {
+  font-size: var(--text-sm);
+  color: var(--c-muted-2);
+}
+.cardFigure {
+  display: grid;
+  justify-items: end;
+  font-variant-numeric: tabular-nums;
+}
+.cardFigure b {
+  font-size: var(--text-head);
+  font-weight: 600;
+  line-height: 1.1;
+}
+.cardFigure small {
+  font-size: var(--text-xs);
+  color: var(--c-muted);
+}
+.cardTools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+.cardTools :global(.seg) {
+  flex-shrink: 0;
+}
+.fold {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--c-muted);
+  cursor: pointer;
+}
+.fold:hover {
+  color: var(--c-ink);
+}
+.fold:active {
+  background: var(--c-border);
+}
+.fold:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+@media (max-width: 480px) {
+  .cardTools {
+    gap: var(--space-xs);
+  }
+  .cardTools :global(.seg button) {
+    padding-inline: var(--space-sm);
+  }
+}
+.card {
+  grid-template-columns: minmax(0, 1fr);
+}
+.cardTools {
+  flex-wrap: wrap;
+}
+.cardTools {
+  row-gap: var(--space-xs);
+}
+/* a narrow card: the fold button stays at the right end of the title row, and the figure goes to a row of its own under it */
+@container (max-width: 26rem) {
+  .cardHead .fold {
+    order: 1;
+  }
+  .cardHead .cardFigure {
+    order: 2;
+    flex-basis: 100%;
+    justify-items: start;
+    grid-auto-flow: column;
+    align-items: baseline;
+    justify-content: start;
+    gap: var(--space-xs);
+  }
+}
+
+/* states of the controls that had only hover or focus */
+.nav button:active {
+  background: var(--c-border);
+}
+.nav button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.cell:active:not(:disabled) {
+  filter: brightness(0.94);
+}
+.cell:disabled {
+  cursor: default;
+}
+.expand:active {
+  color: var(--c-ink);
+  opacity: 0.8;
+}
+.expand:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.expand:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+.fold:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* a month ahead: the forecast of the model, drawn as a dashed outline */
+.cell[data-forecast='on'] {
+  background: transparent;
+  box-shadow: none;
+  border: 1px dashed var(--c-muted);
+  color: var(--c-muted);
+}
+/* the year of the forecast row, quieter than the years counted */
+.label[data-forecast='on'] {
+  color: var(--c-muted);
+}
+.cell[data-forecast='on'][aria-pressed='true'] {
+  box-shadow:
+    0 0 0 1px var(--c-bg),
+    0 0 0 3px var(--c-ink);
+}
+
+/* the question mark by a title: the longer explanation shows over it */
+.hint {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.hint button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin: calc(var(--space-2xs) * -1);
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--c-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+.hint button:hover {
+  color: var(--c-ink);
+}
+.hint button:active {
+  background: var(--c-border);
+}
+.hint button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.hint button:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+.hintText {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + var(--space-2xs));
+  left: 0;
+  width: max-content;
+  max-width: min(260px, 70vw);
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-control);
+  background: var(--c-bg);
+  box-shadow: var(--shadow-float);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--c-muted-2);
+  pointer-events: none;
+}
+.titleLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--space-2xs);
+}
+/* on a phone a note that does not fit beside the title goes whole under it, the hint stays by the title */
+@media (max-width: 520px) {
+  .titleLine > small {
+    order: 1;
+  }
+}
+.scale :global(.wx-key) {
+  position: static;
+  display: block;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  max-width: 100%;
+}
+
+/* four labels of up to four signs stand under the strip: it is wide enough for them not to touch, on a phone too */
+.scale :global(.wx-strip) {
+  width: 176px;
+}
+/* the name of the scale is for a screen reader; on screen it is in the card under the pointer */
+.scale {
+  position: relative;
+}
+.scale :global(.wx-key h3) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.askValue {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+.metric[data-ask='on'] {
+  cursor: pointer;
+}
+/* a light wash over the row, a little wider than its text so the text does not touch the edge */
+.metric[data-ask='on']:hover {
+  background: var(--c-subtle);
+  box-shadow:
+    -8px 0 0 var(--c-subtle),
+    8px 0 0 var(--c-subtle);
+}
+
+/* motion: only transform and opacity, 150 to 300 ms, the owner's curves; each has a still version for reduced motion */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-xs));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes swap {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-2xs));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.card {
+  animation: appear var(--dur-short) var(--ease-out) both;
+}
+.hintText {
+  animation: swap var(--dur-short) var(--ease-out) both;
+}
+.card > :not(header) {
+  animation: swap var(--dur-short) var(--ease-out) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .hintText,
+  .card > :not(header) {
+    animation: none;
+  }
+}
+
+.bar:hover:not(:disabled) {
+  filter: brightness(0.92);
+}
+.bar:active:not(:disabled) {
+  filter: brightness(0.85);
+}
+.bar:disabled {
+  cursor: default;
+}
+.bar:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 2px;
+}
+
+/* the table of the provinces while it comes */
+.provSkel {
+  display: block;
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius-sm);
+}

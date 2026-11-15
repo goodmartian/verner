@@ -1,0 +1,68 @@
+:root {
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-title: 1.125rem;
+  --text-head: 1.5rem;
+  --text-figure: 2.5rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms;
+  --dur-short: 180ms;
+
+  --c-bg: #ffffff;
+  --c-subtle: #f4f4f5;
+  --c-subtle-2: #e9e9ec;
+  --c-border: #e4e4e7;
+  --c-border-2: #d4d4d8;
+  --c-field: #8f8f98;
+  --c-ink: #18181b;
+  --c-ink-2: #3f3f46;
+  --c-muted: #71717a;
+  --c-muted-2: #52525b;
+  --c-on-ink: #ffffff;
+  /* what the assistant draws on the map: a violet that neither the wind, the rain, the dryness nor the fires use as a line */
+  --c-ai: #7c3aed;
+  --c-route: #2563eb;
+  --c-route-hover: #1d4ed8;
+  --c-safe: #15803d;
+  --c-on-route: #ffffff;
+  --c-focus: #2563eb;
+  --c-halo: #ffffff;
+  --c-overlay: rgb(24 24 27 / 0.36);
+  --c-warn-bg: #fdebe7;
+  --c-risk: #8a4b00;
+  --c-risk-bg: #fdf1dc;
+
+  --fire-1: #fed976;
+  --fire-2: #feb24c;
+  --fire-3: #fd8d3c;
+  --fire-4: #f03b20;
+  --fire-5: #bd0026;
+  /* the two palest steps as the map draws them: lighter, so each step of the dots and of the heat stays apart from the next for every kind of colour vision */
+  --fire-map-1: #feeab4;
+  --fire-map-2: #fec170;
+
+  --font-display: 'Inter Tight', 'Inter Variable', system-ui, sans-serif;
+  --font-body: 'Inter Variable', system-ui, -apple-system, sans-serif;
+
+  --radius-panel: 16px;
+  --radius-control: 10px;
+  --radius-sm: 8px;
+
+  --shadow-float: 0 1px 2px rgb(24 24 27 / 0.06), 0 8px 28px rgb(24 24 27 / 0.1);
+  --shadow-xs: 0 1px 2px rgb(24 24 27 / 0.14);
+
+  --gap: 12px;
+  --col-w: clamp(360px, 27vw, 420px);
+
+  color-scheme: light;
+}

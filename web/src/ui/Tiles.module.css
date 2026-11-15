@@ -1,0 +1,113 @@
+/* the figures of a board: a label, a big number, a short caption; the same tiles on the calendar board and on a fire */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xs);
+}
+@container (min-width: 640px) {
+  .tiles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+/* a narrow board: one tile to a row, so a label and its caption have room */
+@container (max-width: 20rem) {
+  .tiles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.tile {
+  display: grid;
+  gap: var(--space-2xs);
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-panel);
+  background: var(--c-subtle);
+}
+button.tile {
+  font: inherit;
+  color: inherit;
+  text-align: start;
+  border: 0;
+  cursor: pointer;
+}
+button.tile:hover {
+  background: var(--c-subtle-2);
+}
+.wide {
+  grid-column: 1 / -1;
+}
+.tile span {
+  font-size: var(--text-sm);
+  color: var(--c-muted-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tile b {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-display);
+  font-size: var(--text-head);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.tile b[data-tone='more'] {
+  color: var(--fire-5);
+}
+.tile small {
+  font-size: var(--text-xs);
+  color: var(--c-muted-2);
+  /* a caption that does not fit in one line takes a second one, and only then is cut */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+/* motion: only transform and opacity, the owner's curves; the number swaps when it changes */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-xs));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes swap {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-2xs));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.tile {
+  animation: appear var(--dur-short) var(--ease-out) both;
+}
+.tile b {
+  animation: swap var(--dur-short) var(--ease-out) both;
+}
+/* the numbers of a row come in as one short wave, the gaps shrinking; the last is in by 250 ms */
+.tile:nth-child(2) b {
+  animation-delay: 30ms;
+}
+.tile:nth-child(3) b {
+  animation-delay: 50ms;
+}
+.tile:nth-child(n + 4) b {
+  animation-delay: 70ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .tile b {
+    animation: none;
+  }
+}

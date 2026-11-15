@@ -1,0 +1,98 @@
+[
+  {
+    "id": "pt-2003-08",
+    "region_id": "PT",
+    "region_name": "Portugal",
+    "month": "2003-08",
+    "era": "MODIS",
+    "source_url": "https://en.wikipedia.org/wiki/List_of_wildfires"
+  },
+  {
+    "id": "id-kt-2006-10",
+    "region_id": "ID-KT",
+    "region_name": "Central Kalimantan, Indonesia",
+    "month": "2006-10",
+    "era": "MODIS",
+    "source_url": "https://en.wikipedia.org/wiki/2006_Southeast_Asian_haze"
+  },
+  {
+    "id": "gr-2007-08",
+    "region_id": "GR",
+    "region_name": "Greece",
+    "month": "2007-08",
+    "era": "MODIS",
+    "source_url": "https://en.wikipedia.org/wiki/2007_Greek_forest_fires"
+  },
+  {
+    "id": "au-vic-2009-02",
+    "region_id": "AU-VIC",
+    "region_name": "Victoria, Australia",
+    "month": "2009-02",
+    "era": "MODIS",
+    "source_url": "https://en.wikipedia.org/wiki/Black_Saturday_bushfires"
+  },
+  {
+    "id": "ru-rya-2010-08",
+    "region_id": "RU-RYA",
+    "region_name": "Ryazan Oblast, Russia",
+    "month": "2010-08",
+    "era": "MODIS",
+    "source_url": "https://en.wikipedia.org/wiki/2010_Russian_wildfires"
+  },
+  {
+    "id": "id-kt-2015-09",
+    "region_id": "ID-KT",
+    "region_name": "Central Kalimantan, Indonesia",
+    "month": "2015-09",
+    "era": "VIIRS",
+    "source_url": "https://en.wikipedia.org/wiki/2015_Southeast_Asian_haze"
+  },
+  {
+    "id": "se-2018-07",
+    "region_id": "SE",
+    "region_name": "Sweden",
+    "month": "2018-07",
+    "era": "VIIRS",
+    "source_url": "https://en.wikipedia.org/wiki/2018_Sweden_wildfires"
+  },
+  {
+    "id": "au-nsw-2019-12",
+    "region_id": "AU-NSW",
+    "region_name": "New South Wales, Australia",
+    "month": "2019-12",
+    "era": "VIIRS",
+    "source_url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_Australian_bushfire_season"
+  },
+  {
+    "id": "us-ca-2020-08",
+    "region_id": "US-CA",
+    "region_name": "California, United States",
+    "month": "2020-08",
+    "era": "VIIRS",
+    "source_url": "https://en.wikipedia.org/wiki/2020_California_wildfires"
+  },
+  {
+    "id": "ru-sa-2021-08",
+    "region_id": "RU-SA",
+    "region_name": "Sakha, Russia",
+    "month": "2021-08",
+    "era": "VIIRS",
+    "source_url": "https://en.wikipedia.org/wiki/2021_Russian_wildfires"
+  },
+  {
+    "id": "ar-w-2022-02",
+    "region_id": "AR-W",
+    "region_name": "Corrientes, Argentina",
+    "month": "2022-02",
+    "era": "VIIRS",
+    "source_url": "https://en.wikipedia.org/wiki/2022_Corrientes_wildfires"
+  },
+  {
+    "id": "ca-qc-2023-06",
+    "region_id": "CA-QC",
+    "region_name": "Quebec, Canada",
+    "month": "2023-06",
+    "era": "VIIRS",
+    "source_url": "https://en.wikipedia.org/wiki/2023_Canadian_wildfires"
+  }
+]
